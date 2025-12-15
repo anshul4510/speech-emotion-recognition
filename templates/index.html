@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech Emotion Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>🎧 Speech Emotion Recognition</h2>
+
+    <input type="file" id="audioFile" accept="audio/*">
+    <button onclick="uploadAudio()">Predict Emotion</button>
+
+    <div id="result"></div>
+
+    <div class="footer">
+        Powered by MFCC & Deep Learning
+    </div>
+</div>
+
+<script>
+    function uploadAudio() {
+        const fileInput = document.getElementById("audioFile");
+        const formData = new FormData();
+        formData.append("audio", fileInput.files[0]);
+
+        fetch("/predict", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("result").innerText =
+                "Predicted Emotion: " + data.emotion;
+        });
+    }
+</script>
+
+</body>
+</html>

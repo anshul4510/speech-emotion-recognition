@@ -19,19 +19,33 @@ The model is trained on a structured speech dataset containing multiple emotiona
 
 ## 🗂️ Dataset Structure
 drive/My Drive/SpeechRecognition/kaggle/input/
+
 ├── OAF_angry/
+
 ├── OAF_disgust/
+
 ├── OAF_fear/
+
 ├── OAF_happy/
+
 ├── OAF_neutral/
+
 ├── OAF_Pleasant_surprise/
+
 ├── OAF_Sad/
+
 ├── YAF_angry/
+
 ├── YAF_disgust/
+
 ├── YAF_fear/
+
 ├── YAF_happy/
+
 ├── YAF_neutral/
+
 ├── YAF_pleasant_surprised/
+
 ├── YAF_sad/
 
 
@@ -42,12 +56,19 @@ drive/My Drive/SpeechRecognition/kaggle/input/
 
 ## 🧠 Emotion Classes
 The final normalized emotion classes used for training are:
+
 angry
+
 disgust
+
 fear
+
 happy
+
 neutral
+
 sad
+
 pleasant_surprise
 
 
